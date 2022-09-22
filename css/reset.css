@@ -1,0 +1,61 @@
+/* *{padding: 0;margin: 0;} */
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+form,
+fieldset,
+legend,
+table,
+tr,
+td,
+input {
+    padding: 0;
+    margin: 0;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    /* IE低版本出现蓝色边框 */
+    border: 0;
+    /* 解决图片的三像素 bug */
+    vertical-align: top;
+}
+
+/* 万能清浮动  只能清除浮动元素对父元素造成的影响 */
+.clear::after {
+    /* 在父元素所有内容的最后放添加伪元素(文本标签) */
+    content: ".";
+    display: block;
+    /* 转化为块级 */
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+.container{
+    width: 1210px;
+    margin: 0 auto;
+    position: relative;
+}
