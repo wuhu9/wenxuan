@@ -174,7 +174,7 @@ header .img-pop .right .btn-2 {
   width: 116px;
   height: 40px;
   background: #fff;
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
   border-radius: 4px;
   line-height: 40px;
   cursor: pointer;
@@ -677,4 +677,4 @@ a:hover {
   cursor: pointer;
 }
 
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=index.min.css.map */
