@@ -5,15 +5,29 @@
   margin-bottom: 8px;
 }
 
-.container {
+body {
+  background: #f7f4ed;
+  font-family: "STFangsong";
+}
+
+a:hover {
+  color: #D52C27;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.center {
   background-image: url(../images/login_bg.png);
   height: 100%;
+  width: 1210px;
+  margin: 0 auto;
+  position: relative;
 }
 
 .login_box {
   width: 366px;
   padding: 24px;
-  background: #fff;
+  background: rgb(255, 255, 255);
   border-radius: 2px;
   position: absolute;
   right: 68px;
@@ -155,6 +169,99 @@
 .iconfont {
   color: #b5b7bf;
   font-size: 20px !important;
+}
+
+.main-sever {
+  color: #666;
+  font-size: 12px;
+  height: 190px;
+}
+.main-sever .sever-list {
+  overflow: hidden;
+  padding: 28px 8px 25px;
+  display: flex;
+  justify-content: space-between;
+}
+.main-sever .sever-list .main-service-list {
+  margin-right: 38px;
+  width: 140px;
+}
+.main-sever .sever-list .main-service-list > dt {
+  border-bottom: 1px solid #c9c9c9;
+  color: #666;
+  font-family: "Microsoft Yahei";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 28px;
+  margin-bottom: 6px;
+  position: relative;
+  text-align: center;
+}
+.main-sever .sever-list .main-service-list dd {
+  font-size: 13px;
+  line-height: 20px;
+  padding-left: 20px;
+}
+
+.content {
+  padding-bottom: 25px;
+}
+.content .top {
+  text-align: center;
+  height: 110px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.content .top > div {
+  height: 55px;
+  flex: 1;
+  align-items: center;
+  color: #444;
+  font-size: 20px;
+  margin-top: 25px;
+  font-weight: 600;
+  position: relative;
+}
+.content .top > div i {
+  position: absolute;
+  left: 60px;
+  font-size: 50px !important;
+  color: #D52C27;
+}
+.content .top > div .icon-feiji_qifei {
+  left: 35px;
+}
+.content .top > div .text {
+  display: inline-block;
+  border-left: 1px solid #E6E6E6;
+  padding-left: 16px;
+  margin-left: 40px;
+  color: #444;
+  line-height: 26px;
+}
+.content .top .iconfont {
+  background-size: 100%;
+  width: 56px;
+  height: 56px;
+  display: inline-block;
+  border-radius: 50%;
+  vertical-align: bottom;
+}
+.content .bottom {
+  color: #666;
+  font-size: 13px;
+  line-height: 25px;
+  text-align: center;
+}
+.content .bottom .info {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.content .bottom a {
+  text-decoration: none;
+  color: #666;
+  text-align: center;
 }
 
 /*# sourceMappingURL=login.css.map */

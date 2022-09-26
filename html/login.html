@@ -8,75 +8,152 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/login.css">
-    <link rel="stylesheet" href="//static.winxuancdn.com/frontstatic/pc/dist/css/login.css?1661927540181">
+    <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3636149_rl3t0zqu3p.css">
+    <link rel="stylesheet" href="https://static.winxuancdn.com/frontstatic/pc/dist/css/login.css?1661927478707">
 </head>
 
 <body>
-    <header>
-
-    </header>
     <div class="login">
-        <div class="container">
-            <div class="login_box">
-                <div class="tabs">
-                    <span class="active" data-type="account_tab">密码登录</span>
-                    <span data-type="mobile_tab">短信登录</span>
+            <div class="center">
+                <div class="login_box">
+                    <div class="tabs">
+                        <span class="active" data-type="account_tab">密码登录</span>
+                        <span  data-type="mobile_tab">短信登录</span>
+                    </div>
+
+                    <div class="form_wrapper">
+
+                        <div class="account_tab show">
+                            <div class="account">
+                                <div class="icon-box">
+                                    <i class="iconfont iconrenbudaiwaiquan"></i>
+                                </div>
+                                <input name="account" placeholder="帐号" type="text">
+                                <label class="error_hint" name="account"></label>
+                            </div>
+
+                            <div class="password">
+                                <div class="icon-box">
+                                    <i class="iconfont iconmima"></i>
+                                </div>
+                                <input name="password" placeholder="密码" type="password">
+                                <label class="error_hint" name="password"></label>
+                            </div>
+                        </div>
+
+                        <div class="mobile_tab ">
+                            <div class="mobile">
+                                <div class="icon-box">
+                                    <i class="iconfont iconshouji"></i>
+                                </div>
+                                <input name="mobile" placeholder="请输入手机号" type="text">
+                                <label class="error_hint" name="mobile"></label>
+                            </div>
+
+                            <div class="mobile_code">
+                                <div class="icon-box">
+                                    <i class="iconfont iconmima"></i>
+                                </div>
+                                <input name="mobile_verify_code" placeholder="请输入6位短信验证码" type="text">
+                                <span class="showPassword">获取验证码</span>
+                                <label class="error_hint" name="mobile_verify_code"></label>
+                            </div>
+                        </div>
+
+                        <div class="remember_pwd">
+                            <input type="checkbox" name="remember" id="remember_pwd">
+                            <label class="error_hint" name="remember"></label>
+                            <label for="remember_pwd">记住密码</label>
+                            <a href="">忘记密码?</a>
+                        </div>
+
+                        <button class="login_btn">登 录</button>
+                    </div>
+
+                    <a class="reg_link" href="regist.html">立即注册</a>
+
                 </div>
-
-                <div class="form_wrapper">
-
-                    <div class="account_tab show">
-                        <div class="account">
-                            <div class="icon-box">
-                                <i class="iconfont iconrenbudaiwaiquan"></i>
-                            </div>
-                            <input name="account" placeholder="帐号" type="text">
-                            <label class="error_hint" name="account"></label>
-                        </div>
-
-                        <div class="password">
-                            <div class="icon-box">
-                                <i class="iconfont iconmima"></i>
-                            </div>
-                            <input name="password" placeholder="密码" type="password">
-                            <label class="error_hint" name="password"></label>
-                        </div>
-                    </div>
-
-                    <div class="mobile_tab ">
-                        <div class="mobile">
-                            <div class="icon-box">
-                                <i class="iconfont iconshouji"></i>
-                            </div>
-                            <input name="mobile" placeholder="请输入手机号" type="text">
-                            <label class="error_hint" name="mobile"></label>
-                        </div>
-
-                        <div class="mobile_code">
-                            <div class="icon-box">
-                                <i class="iconfont iconmima"></i>
-                            </div>
-                            <input name="mobile_verify_code" placeholder="请输入6位短信验证码" type="text">
-                            <span class="showPassword">获取验证码</span>
-                            <label class="error_hint" name="mobile_verify_code"></label>
-                        </div>
-                    </div>
-
-                    <div class="remember_pwd">
-                        <input type="checkbox" name="remember" id="remember_pwd">
-                        <label class="error_hint" name="remember"></label>
-                        <label for="remember_pwd">记住密码</label>
-                        <a href="">忘记密码?</a>
-                    </div>
-
-                    <button class="login_btn">登 录</button>
+        </div>
+        <div class="main-sever">
+            <div class="container">
+                <div class="sever-list">
+                    <dl class="main-service-list">
+                        <dt>新手入门</dt>
+                        <dd><a>购物保障</a></dd>
+                        <dd><a>购物流程</a></dd>
+                        <dd><a>常见问题</a></dd>
+                        <dd><a>联系客服</a></dd>
+                    </dl>
+                    <dl class="main-service-list">
+                        <dt>配送服务</dt>
+                        <dd><a>配送收费标准</a></dd>
+                        <dd><a>快递查询入口</a></dd>
+                        <dd><a>验货与签收</a></dd>
+                    </dl>
+                    <dl class="main-service-list">
+                        <dt>支付方式</dt>
+                        <dd><a>在线支付</a></dd>
+                        <dd><a>银行转账/汇款</a></dd>
+                        <dd><a>其他支付方式</a></dd>
+                        <dd><a>交易安全防诈骗</a></dd>
+                    </dl>
+                    <dl class="main-service-list">
+                        <dt>售后服务</dt>
+                        <dd><a>退换货规则</a></dd>
+                        <dd><a>如何申请售后服务</a></dd>
+                        <dd><a>退款及提现</a></dd>
+                    </dl>
+                    <dl class="main-service-list">
+                        <dt>我的订单</dt>
+                        <dd><a>下单演示</a>
+                        </dd>
+                        <dd><a>订单状态/查询</a></dd>
+                        <dd><a>订单取消</a></dd>
+                        <dd><a>发票制度</a></dd>
+                        <dd><a>积分规则</a></dd>
+                    </dl>
+                    <dl class="main-service-list">
+                        <dt>文轩服务</dt>
+                        <dd><a>礼券（优惠券）</a></dd>
+                        <dd><a>文轩购书卡</a></dd>
+                        <dd><a>文轩畅销书推荐</a></dd>
+                        <dd><a>文轩网用户协议</a></dd>
+                        <dd><a>文轩网用户隐私政策</a></dd>
+                    </dl>
+                    <dl class="main-service-list ">
+                        <dt>电子书阅读器</dt>
+                        <dd><a>PC阅读器</a></dd>
+                    </dl>
                 </div>
-
-                <a class="reg_link" href="regist.html">立即注册</a>
-
             </div>
         </div>
-
+        <div class="content">
+            <div class="container">
+                <div class="top">
+                    <div>
+                        <i class="iconfont icon-zhengpinbaozheng"></i>
+                        <div class="text">正品保障<br>假一赔五</div>
+                    </div>
+                    <div>
+                        <i class="iconfont icon-youhui"></i>
+                        <div class="text">一网打尽<br>更多优惠</div>
+                    </div>
+                    <div>
+                        <i class="iconfont icon-feiji_qifei"></i>
+                        <div class="text">800城市<br>北上广深次日达</div>
+                    </div>
+                    <div>
+                        <i class="iconfont icon-youhuiquan"></i>
+                        <div class="text">电子发票<br>报销无忧</div>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <p class="info"><a>关于文轩</a> |<a>联系文轩</a> | <a>合作伙伴</a></p>
+                    <p>川公网安备 51010602000457号 丨 <a>出版物经营许可证</a> 丨 <a>蜀ICP备11014037号</a><br>
+                        ©2000-<span>2022</span> Winxuan.com 版权所有 丨 客服热线：400-072-0808</p>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 

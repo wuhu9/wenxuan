@@ -1,8 +1,6 @@
 body {
     background: #f7f4ed;
-    font-family: "STFangsong";
 }
-
 
 .text-title {
     position: relative;
@@ -31,8 +29,13 @@ body {
 }
 
 header {
-    height: 30px;
+    height: 37px;
     background-color: #f7f7f7;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 130;
+
 
     .link {
         color: gray;
@@ -43,7 +46,7 @@ header {
             height: 100%;
             float: left;
             font-size: 12px;
-            line-height: 30px;
+            line-height: 37px;
 
             span {
                 color: red;
@@ -54,33 +57,55 @@ header {
     .user-link {
         color: #878787;
         float: right;
+        position: relative;
+
+        .li-1:hover {
+            background-color: white;
+            // border: 1px solid #eee;
+            // box-shadow: 0 -1px 2px 1px gray;
+            border-bottom: none;
+        }
+
+        .li-1:hover .pop {
+            display: block;
+        }
+
+        .li-3:hover .img-pop {
+            display: flex;
+        }
 
         li {
             height: 100%;
-            width: 48px;
+            width: 66px;
             float: left;
             font-size: 12px;
+            color: #323232;
             margin-right: 20px;
-            line-height: 30px;
+            line-height: 36px;
+            text-align: center;
+            display: block;
         }
     }
 
     .pop {
-        width: 100%;
-        color: #878787;
-        height: 180px;
-        font-size: 100%;
-        font-weight: 400;
-        border: none;
-        background-color: white;
-        // box-shadow: 0px 0px 1px 1px gray;
+        background: #fff;
         display: none;
-        justify-content: space-between;
-        flex-direction: column;
+        position: absolute;
+        top: 36px;
+        width: 66px;
+        z-index: 130;
+        // padding: 10px;
+        // border: 1px solid #eee;
+        // box-shadow: 0 2px 2px 1px gray;
+        // text-align: left;
+        border-top: none;
+
+
+        left: 0;
 
         li {
-            height: 20px;
-            line-height: 20px;
+            height: 36ppx;
+            line-height: 36px;
             float: none;
             font-size: 100%;
             font-weight: 400;
@@ -89,7 +114,8 @@ header {
 
     .user-pop {
         @extend.pop;
-        height: 60px;
+        left: 172px;
+        // height: 60px;
     }
 
     .img-pop {
@@ -98,6 +124,8 @@ header {
         margin-left: -300px;
         padding: 15px;
         width: 350px;
+        position: absolute;
+        background: white;
 
         .left {
             display: flex;
@@ -131,6 +159,12 @@ header {
 
 .search {
     background: #FFFEFF;
+    position: sticky;
+    top: 30px;
+    left: 0;
+    z-index: 101;
+    transition: top .3s ease-out 0s;
+
 
     .container {
         display: flex;
@@ -252,26 +286,31 @@ nav {
         }
     }
 }
+
 .banner {
     height: 480px;
     width: 1518px;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
-    .container{
+
+    .container {
         height: 100%;
     }
-    .img-wrap{
+
+    .img-wrap {
         width: 1200%;
         height: 100%;
         position: absolute;
         text-align: center;
-        img{
+
+        img {
             width: 8.33333%;
             height: 100%;
             float: left;
         }
     }
+
     .mainmeum {
         width: 208px;
         position: absolute;
@@ -281,6 +320,28 @@ nav {
         font-family: "Microsoft Yahei";
         background: rgba(255, 253, 252, .6);
         top: 0;
+
+        .solid {
+            width: 2px;
+            background: #FEFCFD;
+            z-index: 10;
+            position: absolute;
+            right: -1px;
+            top: 0;
+            display: none;
+        }
+
+        dl:hover {
+            border: 2px solid #E4393C;
+            border-right: none;
+        }
+        dl:hover .pop-box{
+            display: block;
+         }
+         .last-meum{
+            border: none !important;
+         }
+  
 
         dl {
             zoom: 1;
@@ -302,6 +363,47 @@ nav {
                 line-height: 20px;
                 float: left;
                 font-size: 12px;
+            }
+
+            .pop-box {
+                width: 834px;
+                height: 450px;
+                padding: 13px 32px;
+                position: absolute;
+                left: 207px;
+                top: 0;
+                border: 2px solid #E4393C;
+                z-index: 9;
+                background: #FEFCFD;
+                font-size: 13px;
+                display: none;
+                transition: width .6s linear .6s;
+          
+                li {
+                    float: left;
+                    padding: 13px 0;
+
+                    .left-title {
+                        display: inline-block;
+                        width: 116px;
+                    }
+
+
+                }
+          
+                .right-content {
+                    display: inline-block;
+                    width: 678px;
+                    margin-left: 23px;
+                    border-bottom: 1px dashed #DAD8D9;
+                    color: #000;
+
+                    a {
+                        margin-bottom: 2px;
+                        display: inline-block;
+                        color: gray;
+                    }
+                }
             }
         }
     }
@@ -368,6 +470,12 @@ nav {
                 font-size: 13px;
                 border-top: 1px solid #e2e2e2;
 
+                a:hover {
+                    color: #D52C27;
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+
                 a {
                     display: inline-block;
                     padding: 0 15px;
@@ -386,6 +494,10 @@ nav {
                 display: flex;
                 justify-content: space-between;
                 flex-wrap: wrap;
+
+                .tab-img:hover {
+                    border: 1px solid red;
+                }
 
                 .tab-img {
                     width: 230px;
@@ -452,6 +564,10 @@ nav {
         flex-wrap: wrap;
         display: flex;
         justify-content: space-between;
+
+        .bt-col:hover {
+            border: 1px solid red;
+        }
 
         .bt-col {
             width: 230px;
@@ -542,6 +658,15 @@ nav {
             display: flex;
             justify-content: start;
 
+            .press-item:hover {
+                cursor: pointer;
+            }
+
+            .press-item:hover .a-box {
+                opacity: 1;
+
+            }
+
             .press-item {
                 width: 200px;
                 height: 116px;
@@ -550,6 +675,9 @@ nav {
                 border-bottom: 1px solid #F1F1F1;
                 margin-left: -1px;
                 margin-bottom: -1px;
+
+
+
 
                 .img {
                     width: 180px;
@@ -570,6 +698,7 @@ nav {
                     text-align: center;
                     transform: translateY(-22px);
                     opacity: 0;
+                    transition: 1s ease all;
 
                     a {
                         font-size: 14px;
@@ -675,19 +804,19 @@ nav {
         text-align: center;
 
         .info {
-            color: #666;
             font-size: 14px;
             margin-bottom: 20px;
         }
 
         a {
             text-decoration: none;
-            color: #666;
             text-align: center;
         }
     }
 }
-a:hover{
-    color: #D52C27;
+
+a:hover {
+    color: #D52C27 !important;
+    text-decoration: underline;
     cursor: pointer;
 }
