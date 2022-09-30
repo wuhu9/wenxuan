@@ -1,58 +1,72 @@
 <?php
-@include "./conn.php";
 
-if (!($_GET['username'] &&  $_GET['num'] && $_GET['id'])) {
-    exit("数据不完整");
+@include_once("conn.php");
+
+
+if (!(isset($_POST["user"]) && isset($_POST["gid"]) && $_POST["num"])) {
+    exit('{"status":false,"message":"请传入完整参数!"}');
 }
-$res = [];
+
+$user = $_POST["user"];
+$gid = $_POST["gid"];
+$num = $_POST["num"];
 
 
-// 前端携带数据   username   num    goods_id
-$name = $_GET['username'];
-$num = $_GET['num'];
-$id = $_GET['id'];
+$obj = array();
 
+$sql = "select * from `shoppingcar` where user='$user' and gid = '$gid'";
 
-if ($name && $num && $id) {
+$result = mysqli_query($conn, $sql);
+// print_r($result);  //mysqli_result 对象
 
-    // 先判断这个人是否把这个商品加入过购物车
-    //     已经加入过   修改数量
-    //     没有加入过   才插入
+if ($result) { // 查询成功    (查询成功 并不代表有数据, 有数据 => 还要解析)
+    // print_r($result);  //mysqli_result 对象
 
-    // 先查询 是否把这个商品加入过购物车
-    $sql = "SELECT * FROM cart WHERE username = '$name' AND goods_id = $id";
-    // 得到的是结果集
-    $a = mysqli_query($con, $sql);
-    // 转对象
-    $arr = mysqli_fetch_array($a);
-    if ($arr) {
-        // 更新数据
-        $sql = "UPDATE cart SET num = num + $num WHERE username = '$name' AND goods_id = $id";
-        // 执行sql   得到受影响的行数 --- 数字
-        $a = mysqli_query($con, $sql);
-        if ($a) {
-            $res['status'] = true;
-            $res['msg'] = '加入购物车成功';
-        } else {
-            $res['status'] = false;
-            $res['msg'] = '数据库错误';
+    $item = mysqli_fetch_assoc($result);
+
+    if (!($item)) { 
+        $sql = "insert into `shoppingcar`(user,gid,num) values('$user',$gid,1);";
+        $result = mysqli_query($conn, $sql);
+
+        if ($result) { //语句执行成功  => 数据不一定会有影响 
+    
+            //  $rows = mysqli_affected_rows($conn)  判断受影响的行数
+            // $rows > 0    增删改 成功
+            // $rows  == 0  语句执行成功 数据未改变 (新增 不会出现此情况)
+            // $rows == -1  语句执行失败 sql语句有误
+    
+            $rows = mysqli_affected_rows($conn);
+    
+            if ($rows > 0) {
+                $obj["status"] = true;
+                $obj["message"] = "新增成功";
+            } else { //  $rows  == 0
+                $obj["status"] = true;
+                $obj["message"] = "新增成功,数据未改变";
+            }
+        } else { // 语句执行失败 => 语句有误
+            $obj["status"] = false;
+            $obj["message"] = "sql语句有误";
+            $obj["sql"] = $sql;
         }
-    } else {
-        // 插入数据
-        $sql = "INSERT INTO cart (username , num , goods_id) VALUES ('$name' , $num , $id)";
+    }else{
+        $sql = "UPDATE shoppingcar SET num = num + $num WHERE user = '$user' AND gid = '$id'";
         // 执行sql   得到受影响的行数 --- 数字
-        $a = mysqli_query($con, $sql);
-        if ($a > 0) {
-            $res['status'] = true;
-            $res['msg'] = '加入购物车成功';
+        $result = mysqli_query($conn, $sql);
+        if ($result) {
+            $obj['status'] = true;
+            $obj['msg'] = '加入购物车成功';
         } else {
-            $res['status'] = false;
-            $res['msg'] = '数据库错误';
+            $obj['status'] = false;
+            $obj['msg'] = '数据库错误';
         }
     }
+
+   
 } else {
-    $res['status'] = false;
-    $res['msg'] = '前端数据有误';
+    $obj["status"] = false;
+    $obj["message"] = "sql语句有误";
+    $obj["sql"] = $sql;
 }
 
-echo (json_encode($res));
+echo json_encode($obj);

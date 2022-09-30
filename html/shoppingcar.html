@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>购物车</title>
+    <link rel="stylesheet" href="../css/shoppingcar.css">
+    <link rel="stylesheet" href="../css/reset.css">
+
+    <script src="../js/tools/request.js"></script>
+    <script src="../js/tools/interface.js"></script>
+    <script src="../js/tools/jquery-3.6.0.min.js"></script>
+    <script src="../js/shoppingcar.js"></script>
+    <script src="../js/tools/cookie.js"></script>
 </head>
+
 <body>
     <div class="layout">
         <!-- 悬浮表头 开始 -->
@@ -21,124 +31,108 @@
         </div> <!-- 悬浮表头 结束 -->
         <div class="header">
             <h1>
-                <p class="service-tel J_service">联系客服</p><a href="//www.winxuan.com" target="_blank"><img src="https://static.winxuancdn.com/css2/images/logo.png"></a>
+                <p class="service-tel J_service">联系客服</p><a href="index.html" target="_blank"><img
+                        src="https://static.winxuancdn.com/css2/images/logo.png"></a>
             </h1>
             <div class="progress no"></div>
         </div>
         <div class="content">
+            <!-- <div class="empty">
+                <p class="follow">您的购物车是空的，赶紧去</p>
+                <div class="follow">
+                    <div id="spe-services" fragment="2000" cachekey="nocache">
+                        <p class="spe_services"><a target="_blank" href="//www.winxuan.com/"
+                                title="">❤老客户回馈，积分换礼券，购书更实惠</a>
+                        </p>
+                    </div>
+                </div>
+                <p class="follow">看看吧</p>
+                <p>您也可以从<a href="javascript:''" class="red">我的收藏</a>中取出商品</p>
+            </div> -->
             <!-- 购物车商品列表 开始 -->
-            <div class="table-list" id="cart-list">
-                <div class="thead">
-                    <!--<div class="checkbox"><input name="all" type="checkbox"/><label>全选</label></div>-->
-                    <div class="product">商品</div>
-                    <div class="price">文轩价</div>
-                    <div class="credits">积分</div>
-                    <div class="privilege">优惠</div>
-                    <div class="quantity">数量</div>
-                    <div class="operation">操作</div>
-                </div>
-                    <!-- 一级分类 -->
-                    <div class="group" data-shopgroup-id="1">
-                        <div class="shop proms">
-                            <input class="group-check" type="checkbox" name="groupCheck" value="1">
-                            <b>商家：文轩网图书音像</b>
+            <div class="catbox">
+                <table id="cartTable">
+                    <thead>
+                        <tr>
+                            <th><label>
+                                    <input class="check-all check" type="checkbox" />&nbsp;&nbsp;全选</label></th>
+                            <th>商品</th>
+                            <th>单价</th>
+                            <th>数量</th>
+                            <th>小计</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+                <div class="foot" id="foot">
+
+                    <a class="fl" id="deleteAll" href="javascript:;">删除</a>
+                    <div class="fr closing">结 算</div>
+                    <input type="hidden" id="cartTotalPrice" />
+                    <div class="fr total">合计：￥<span id="priceTotal">0.00</span></div>
+                    <div class="fr selected" id="selected">已选商品<span id="selectedTotal">0</span>件<span
+                            class="arrow up">︽</span><span class="arrow down">︾</span></div>
+                    <div class="selected-view">
+                        <div id="selectedViewList" class="clearfix">
+                            <div><img src=""><span>取消选择</span></div>
                         </div>
-                                <div class="prom-group">
-                                    <!-- 满减 -->
-                                    <div class="promsinfo noprom" data-id="-1">
-                                        <p class="save"><span class="info" data-info="无促销">无促销</span>
-                                                <b>0.00</b>
-                                        </p>
-    
-                                    </div>
-                                            <div class="trow">
-                                                <div class="checkbox">
-                                                    <input name="item" type="checkbox" data-shopgroup-id="1" value="1202294388">
-                                                </div>
-                                                <div class="product">
-                                                    <a href="//item.winxuan.com/1202294388" target="_blank">
-                                                        <img src="https://img1.winxuancdn.com/3261/1202473261_49_0_original_800x800.jpg?27122000&amp;imageMogr2/thumbnail/200x200" alt="克拉拉与太阳">
-                                                    </a>
-                                                    <a href="//item.winxuan.com/1202294388" target="_blank" title="克拉拉与太阳">克拉拉与太阳
-                                                    </a>
-                                                    <p class="red-hint"></p>
-                                                </div>
-                                                <div class="price">¥<em>53</em></div>
-                                                <div class="credits">530</div>
-                                                <div class="privilege"></div>
-                                                    <div class="quantity" data-min="1" data-max=" 1643 ">
-                                                        <a href="javascript:;" title="减少" class="reduce" data-id="1202294388">减少</a>
-                                                        <input name="quantity" value="1" data-value="1" data-id="1202294388">
-                                                        <a href="javascript:;" title="增加" class="increase" data-id="1202294388">增加</a>
-                                                    </div>
-    
-                                                <div class="operation" style="position: relative;">
-                                                    <a href="javascript:;" class="remove" data-id="1202294388">删除</a>
-                                                </div>
-                                            </div>
-                                </div>
-    
-                    </div>
-                    <!-- 一级分类 end-->
-    
-                <!-- 底部删除和收藏 -->
-                <div class="tfoot">
-                    <div class="summary">
-                        <ul>
-                            <li class="delete"><a href="javascript:;" class="remove_select">删除所选商品</a></li>
-                            <li class="favorite"><a href="javascript:;" class="favorite_select">收藏所选商品</a></li>
-                        </ul>
-                        <div class="brief">
-                            <div><span><b class="productCount">1</b>件商品</span> <label>总计</label>
-                                <p class="price">¥<em>53</em></p>
-                            </div>
-                            <div class="save"><label>优惠</label>
-                                <p class="privilege">-¥<em>0</em></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="count">
-                        <div class="balance"><span style="visibility:hidden">本单已免运费</span> <label>合计（不含运费）</label>
-                            <p class="price">¥<em>53</em></p>
-                        </div>
+                        <span class="arrow">◆<span>◆</span></span>
                     </div>
                 </div>
-    
-    
             </div>
-            <!-- 悬浮结算信息 开始 -->
-            <div class="atf-balance" style="display: none;">
-                <ul>
-                    <li class="brief">
-                        <div><span>共<b>1</b>件商品</span> <label>总计：</label>
-                            <p class="price">¥<em>53</em></p>
-                        </div>
-                        <div class="save"><label>优惠：</label>
-                            <p class="privilege">¥<em>0</em></p>
-                        </div>
-                    </li>
-                    <li class="count">
-                        <div><label>合计（不含运费）：</label>
-                            <p class="price">¥<em>53</em></p>
-                        </div>
-                    </li>
-                    <li><a class="balance submit_btn"><i>去结算</i><b></b></a></li>
-                </ul>
-            </div> <!-- 悬浮结算信息 结束 -->
-            <div class="button-wrap">
-                <p class="valid-tip" style="display: none;">
-                    温馨提示：请至少选择一件商品，方可继续结算！
-                </p>
-                <a class="continue" href="//www.winxuan.com">
-                    <i>继续购物</i>
-                    <b></b>
-                </a>
-                    <a class="balance submit_btn">
-                        <i>去结算</i>
-                        <b></b>
-                    </a>
-                </div>
-    
         </div>
+        <div class="button-wrap">
+            <p class="valid-tip" style="display: none;">
+                温馨提示：请至少选择一件商品，方可继续结算！
+            </p>
+            <a class="continue" href="index.html">
+                <i>继续购物</i>
+                <b></b>
+            </a>
+            <a class="balance submit_btn">
+                <i>去结算</i>
+                <b></b>
+            </a>
+        </div>
+    </div>
+    <!-- 悬浮结算信息 开始 -->
+    <!-- <div class="atf-balance" style="display:block">
+            <ul>
+                <li class="brief">
+                    <div><span>共<b>0</b>件商品</span> <label>总计：</label>
+                        <p class="price">¥<em>0</em></p>
+                    </div>
+                    <div class="save"><label>优惠：</label>
+                        <p class="privilege">¥<em>0</em></p>
+                    </div>
+                </li>
+                <li class="count">
+                    <div><label>合计（不含运费）：</label>
+                        <p class="price">¥<em>0</em></p>
+                    </div>
+                </li>
+                <li><a class="balance submit_btn"><i>去结算</i><b></b></a></li>
+            </ul>
+        </div> 悬浮结算信息 结束 -->
+    <!-- <div class="button-wrap">
+        <p class="valid-tip" style="display: none;">
+            温馨提示：请至少选择一件商品，方可继续结算！
+        </p>
+        <a class="continue" href="index.html">
+            <i>继续购物</i>
+            <b></b>
+        </a>
+        <a class="balance submit_btn">
+            <i>去结算</i>
+            <b></b>
+        </a>
+    </div> -->
 </body>
+<script>
+
+</script>
+
 </html>

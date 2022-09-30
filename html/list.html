@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>商品详情</title>
-    <link rel="stylesheet" href="../css/details.css">
+    <title>搜索</title>
     <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3636149_rl3t0zqu3p.css">
+    <link rel="stylesheet" href="../css/list.css">
+
 
     <script src="../js/tools/request.js"></script>
     <script src="../js/tools/interface.js"></script>
     <script src="../js/tools/jquery-3.6.0.min.js"></script>
-    <script src="../js/details.js"></script>
+    <script src="../js/list.js"></script>
     <script src="../js/tools/cookie.js"></script>
 </head>
 
@@ -23,8 +23,8 @@
             <ul class="link">
                 <li>欢迎光临新华文轩网！ &emsp;</li>
                 <li>
-                    <a href="login.html">请 <span>登录&emsp; </span></a>
-                    <a href="regist.html"> 免费注册</a>
+                    <a href="login.html" class="user">请 <span>登录&emsp; </span></a>
+                    <a href="regist.html" class="reg"> 免费注册</a>
                 </li>
             </ul>
             <ul class="user-link">
@@ -71,8 +71,8 @@
             </div>
             <div class="center">
                 <img src="../images/index-search-icon.png" alt="">
-                <input type="text" autocomplete="off" name="keyword" placeholder="">
-                <button>搜索</button>
+                <input type="text" autocomplete="off" class="keyword" placeholder="">
+                <button class="search-click">搜索</button>
             </div>
             <div class="right">
                 <b></b>
@@ -80,13 +80,41 @@
             </div>
         </div>
     </div>
-    <section>
+    <main>
         <div class="container">
-            <div class="product-intro">
-                
+            <div class="tip">
+                <div class="paging">
+                    <p>分页：</p>
+                    <select class="showSel">
+                        <option value="5" selected>每页显示5条</option>
+                        <option value="10">每页显示10条</option>
+                        <option value="15">每页显示15条</option>
+                        <option value="20">每页显示20条</option>
+                    </select>
+                </div>
+                <div class="sort">
+                    <p>排序：</p>
+                    <label><input type="radio" name="orderType" class="orderType_one" value="asc"
+                            checked="checked">价格升序</label>
+                    <label><input type="radio" name="orderType" class="orderType_two" value="desc">价格降序</label>
+                </div>
+                <div class="sub">
+                    <p>重置条件：</p>
+                    <input class="resetGrade" type="reset" value="重置">
+                </div>
+            </div>
+
+            <ul class="group-ul">
+
+            </ul>
+            <div class="page">
+                <span class="prev"><</span>
+                     <p id="page">1/2</p>
+                <span class="next">></span>
             </div>
         </div>
-    </section>
+
+    </main>
     <div class="main-sever">
         <div class="container">
             <div class="sever-list">

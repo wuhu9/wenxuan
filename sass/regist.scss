@@ -50,6 +50,7 @@ body {
         }
 
 
+
         .input-item {
             position: relative;
             display: flex;
@@ -57,6 +58,15 @@ body {
             height: 42px;
             line-height: 42px;
             margin-bottom: 32px;
+
+            .text-hint {
+                position: absolute;
+                top: 46px;
+                font-size: 12px;
+                left: 140px;
+                line-height: 14px;
+                color: #e50834;
+            }
 
             .regist-input {
                 flex: 1;
@@ -82,8 +92,10 @@ body {
                 color: #fff;
                 border-radius: 5px;
                 cursor: pointer;
+                text-align: center;
                 border: none;
             }
+
 
         }
 

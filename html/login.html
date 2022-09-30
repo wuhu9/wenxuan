@@ -5,11 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>用户登录</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3636149_rl3t0zqu3p.css">
     <link rel="stylesheet" href="https://static.winxuancdn.com/frontstatic/pc/dist/css/login.css?1661927478707">
+    
+    <script src="../js/tools/request.js"></script>
+    <script src="../js/tools/interface.js"></script>
+    <script src="../js/tools/jquery-3.6.0.min.js"></script>
+    <script src="../js/login.js"></script>
+    <script src="../js/tools/cookie.js"></script>
 </head>
 
 <body>
@@ -18,7 +24,7 @@
                 <div class="login_box">
                     <div class="tabs">
                         <span class="active" data-type="account_tab">密码登录</span>
-                        <span  data-type="mobile_tab">短信登录</span>
+                        <!-- <span  data-type="mobile_tab">短信登录</span> -->
                     </div>
 
                     <div class="form_wrapper">
@@ -28,7 +34,7 @@
                                 <div class="icon-box">
                                     <i class="iconfont iconrenbudaiwaiquan"></i>
                                 </div>
-                                <input name="account" placeholder="帐号" type="text">
+                                <input id="account" placeholder="用户名或手机" type="text" >
                                 <label class="error_hint" name="account"></label>
                             </div>
 
@@ -36,12 +42,12 @@
                                 <div class="icon-box">
                                     <i class="iconfont iconmima"></i>
                                 </div>
-                                <input name="password" placeholder="密码" type="password">
+                                <input id="password" placeholder="密码" type="password">
                                 <label class="error_hint" name="password"></label>
                             </div>
                         </div>
 
-                        <div class="mobile_tab ">
+                        <!-- <div class="mobile_tab ">
                             <div class="mobile">
                                 <div class="icon-box">
                                     <i class="iconfont iconshouji"></i>
@@ -58,7 +64,7 @@
                                 <span class="showPassword">获取验证码</span>
                                 <label class="error_hint" name="mobile_verify_code"></label>
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="remember_pwd">
                             <input type="checkbox" name="remember" id="remember_pwd">

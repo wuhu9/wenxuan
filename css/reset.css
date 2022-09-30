@@ -42,6 +42,9 @@ img {
     /* 解决图片的三像素 bug */
     vertical-align: top;
 }
+em{
+    font-style: normal;
+}
 
 /* 万能清浮动  只能清除浮动元素对父元素造成的影响 */
 .clear::after {

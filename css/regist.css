@@ -53,6 +53,14 @@ body {
   line-height: 42px;
   margin-bottom: 32px;
 }
+.regist-wrap .regist-form .input-item .text-hint {
+  position: absolute;
+  top: 46px;
+  font-size: 12px;
+  left: 140px;
+  line-height: 14px;
+  color: #e50834;
+}
 .regist-wrap .regist-form .input-item .regist-input {
   flex: 1;
   padding: 13px 11px;
@@ -75,6 +83,7 @@ body {
   color: #fff;
   border-radius: 5px;
   cursor: pointer;
+  text-align: center;
   border: none;
 }
 .regist-wrap .regist-form .regist-btn {

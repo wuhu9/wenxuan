@@ -1,0 +1,817 @@
+$headbgc: #000000;
+$tcolor: #cccccc;
+$thover: #FFFFFF;
+$bcolor: #E5E5E5;
+$hot: #D56369;
+$cont: 1205px;
+$fz: 12px;
+
+.layout {
+    margin: 0 auto;
+    width: 1016px;
+    text-align: left;
+    font-size: 1em;
+    position: relative;
+    font-size: 12px;
+
+    .atf-head {
+        position: fixed;
+        top: 0;
+        width: 990px;
+        z-index: 100;
+        margin: 0 auto;
+        background: #fff;
+
+        .thead {
+            height: 36px;
+            border-bottom: 1px solid #ddd;
+            clear: both;
+            background: #f3f3f3;
+
+            .product {
+                width: 435px;
+            }
+
+            .price {
+                width: 105px;
+            }
+
+            .credits {
+                width: 95px;
+            }
+
+            .privilege {
+                width: 120px;
+            }
+
+            .quantity {
+                width: 100px;
+            }
+
+            .operation {
+                width: 100px;
+            }
+
+            .product,
+            .price,
+            .credits,
+            .privilege,
+            .quantity,
+            .operation {
+                height: 36px;
+                float: left;
+                line-height: 36px;
+                text-align: center;
+                color: #666;
+            }
+
+        }
+    }
+
+    .header {
+        height: 100px;
+        h1{
+           position: relative;
+           top: 40px;
+        }
+        p {
+            float: right;
+            width: 80px;
+            color: #7e7e7e;
+            font-size: 18px;
+            line-height: 46px;
+            font-weight: normal;
+            text-align: right;
+            cursor: pointer;
+        }
+    }
+
+    .content {
+        padding: 10px 0;
+
+        .empty {
+            background: #f9f9f9 url(https://static.winxuancdn.com/css/v1/images/emptycart.jpg) 250px 50px no-repeat;
+            border: 1px solid #d9d9d9;
+            border-radius: 5px;
+            padding: 90px 90px 90px 390px;
+            margin: 30px 0;
+
+            p {
+                font-size: 1.2em;
+            }
+
+            .red {
+                color: #e22;
+            }
+
+            .follow {
+                font-size: 1.3em;
+                display: inline-block;
+
+                a {
+                    text-decoration: none;
+                    color: #06c;
+                    outline: none;
+                }
+            }
+        }
+
+        .table-list {
+            border: 1px solid #ddd;
+            background: #fffefd;
+            margin-bottom: 20px;
+
+            .thead {
+                height: 36px;
+                border-bottom: 1px solid #ddd;
+                clear: both;
+                background: #f3f3f3;
+
+                .product,
+                .price,
+                .credits,
+                .privilege,
+                .quantity,
+                .operation {
+                    height: 36px;
+                    float: left;
+                    line-height: 36px;
+                    text-align: center;
+                    color: #666;
+                    border-right: 1px solid #fff;
+                }
+
+                .product {
+                    width: 435px;
+                }
+
+                .price {
+                    width: 105px;
+                }
+
+                .credits {
+                    width: 95px;
+                }
+
+                .privilege {
+                    width: 120px;
+                }
+
+                .quantity {
+                    width: 100px;
+                }
+
+                .operation {
+                    width: 100px;
+                }
+            }
+
+            .group {
+                color: #666;
+                border-bottom: 1px dashed #ddd;
+                background: #f9f9f9;
+                position: relative;
+
+                .group-check {
+                    position: absolute;
+                    left: 12px;
+                    top: 9px;
+                }
+
+                .shop {
+                    color: #666;
+                    border-bottom: 1px dashed #ddd;
+                    background: #f9f9f9;
+                    position: relative;
+                    height: 30px;
+                    clear: both;
+                    line-height: 30px;
+                    padding: 0 0 0 40px;
+                }
+
+                .prom-group {
+                    .trow {
+                        height: 65px;
+                        border-bottom: 1px solid #ddd;
+                        clear: both;
+                        line-height: 65px;
+                        position: relative;
+
+                        div {
+                            height: 65px;
+                            float: left;
+                            text-align: center;
+                            color: #333;
+                        }
+
+                        .checkbox {
+                            width: 35px;
+
+                            input {
+                                position: absolute;
+                                top: 23px;
+                                left: 20px;
+                            }
+                        }
+
+                        .product {
+                            display: flex;
+                            width: 400px;
+                            line-height: 20px;
+
+                            img {
+                                height: 55px;
+                                width: 55px;
+                                float: left;
+                                margin: 5px;
+                                border: 0;
+                                vertical-align: top;
+                                overflow: hidden;
+                            }
+
+                            a:first-child {
+                                width: 65px;
+                                flex-shrink: 0;
+                                padding: 0;
+                            }
+
+                            a:nth-child(2) {
+                                flex: 1;
+                                text-align: left;
+                                text-overflow: -o-ellipsis-lastline;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                display: -webkit-box;
+                                line-clamp: 2;
+                                height: 40px;
+                            }
+
+                            a {
+                                text-decoration: none;
+                                color: #06c;
+                                outline: none;
+                            }
+                        }
+
+                        .price {
+                            width: 105px;
+                        }
+
+                        .credits {
+                            width: 95px;
+                        }
+
+                        .privilege {
+                            width: 120px;
+                        }
+
+                        .quantity {
+                            width: 100px;
+                            position: relative;
+                            line-height: 65px;
+
+                            .increase {
+                                background: url(https://static.winxuancdn.com/css/v1/images/icons.png) no-repeat -23px 0;
+                                top: 24px;
+                                left: 86px;
+                            }
+
+                            input {
+                                width: 40px;
+                                text-align: center;
+                                border: 1px solid #ddd;
+                                border-radius: 2px;
+                                height: 20px;
+                                top: 20px;
+                                left: 40px;
+                                overflow: visible;
+                                position: absolute;
+                            }
+
+
+
+                            a {
+                                display: block;
+                                width: 18px;
+                                height: 13px;
+                                text-indent: -9999px;
+                                overflow: hidden;
+                                position: absolute;
+                                line-height: normal;
+                            }
+
+                            .reduce {
+                                background: url(https://static.winxuancdn.com/css/v1/images/icons.png) no-repeat 0 0;
+                                top: 24px;
+                                left: 18px;
+                                position: absolute;
+                                line-height: normal;
+
+                            }
+                        }
+
+                        .operation {
+                            width: 100px;
+                        }
+                    }
+                }
+            }
+
+            .tfoot {
+                background: #f3f3f3;
+
+                .summary {
+                    height: 50px;
+                    background: #fff;
+                    position: relative;
+
+
+                    ul {
+                        clear: both;
+                        padding: 10px 20px;
+
+                        li {
+                            float: left;
+                            line-height: 24px;
+                            margin: 0 10px 0 0;
+                            padding: 0 8px 0 20px;
+
+                            a {
+                                background: #fff;
+                                display: block;
+                                text-decoration: none;
+                                color: #06c;
+                                outline: none;
+                            }
+                        }
+
+                        .favorite {
+                            background: url(https://static.winxuancdn.com/css/v1/images/icons.png) no-repeat -44px 4px;
+
+                        }
+
+                        .delete {
+                            background: url(https://static.winxuancdn.com/css/v1/images/icons.png) no-repeat -63px 4px;
+                        }
+                    }
+
+                    .brief {
+                        width: 360px;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+
+                        p {
+                            width: 145px;
+                            text-align: right;
+                            float: left;
+                        }
+
+                        span {
+                            width: 100px;
+                            text-align: right;
+                            float: left;
+                        }
+
+                        label {
+                            float: left;
+                            width: 100px;
+                            text-indent: 10px;
+                        }
+
+                        div {
+                            height: 25px;
+                            line-height: 25px;
+                            clear: both;
+                        }
+                    }
+
+                    .save {
+                        label {
+                            width: 200px;
+                            text-indent: 110px;
+                        }
+                    }
+                }
+
+                .count {
+                    height: 40px;
+                    position: relative;
+                    clear: both;
+
+                    .balance {
+                        width: 450px;
+                        position: absolute;
+                        right: 0;
+                        top: 5px;
+                        height: 30px;
+                        line-height: 30px;
+
+                        .price {
+                            width: 165px;
+                            right: 16px;
+                            top: 0;
+                            text-align: right;
+                            color: #e22;
+                            font-weight: bolder;
+                            font-size: 1.5em;
+                            position: absolute;
+                        }
+
+                        label {
+                            width: 110px;
+                            right: 220px;
+                            font-weight: bolder;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .button-wrap {
+        height: 80px;
+        clear: both;
+
+        .continue {
+            float: left;
+            width: 142px;
+            height: 45px;
+            background-color: #f2f2f2;
+            border: none;
+            color: #333;
+            position: relative;
+            display: block;
+            zoom: 1;
+            outline: none;
+
+            b {
+                width: 142px;
+                height: 45px;
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 9;
+                background-image: url(https://static.winxuancdn.com/css/v1/images/balance-button.jpg);
+                cursor: pointer;
+                background-position: 0 -4px;
+            }
+        }
+
+        .balance {
+            width: 208px;
+            height: 45px;
+            float: right;
+            background-color: #f2f2f2;
+            border: none;
+            color: #333;
+            position: relative;
+            display: block;
+            padding: 0;
+            margin: 0;
+            zoom: 1;
+            outline: none;
+
+            b {
+                width: 208px;
+                height: 45px;
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 9;
+                background-image: url(https://static.winxuancdn.com/css/v1/images/balance-button.jpg);
+                cursor: pointer;
+                background-position: -142px -4px;
+            }
+
+        }
+    }
+
+    .content {
+        padding: 10px 0;
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 0;
+        }
+
+        body {
+            color: #666;
+            font: 12px/180% Arial, Helvetica, sans-serif, "新宋体";
+        }
+
+        clearfix:after {
+            content: ".";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden
+        }
+
+        .clearfix {
+            display: inline-table
+        }
+
+        *html .clearfix {
+            height: 1%
+        }
+
+        .clearfix {
+            display: block
+        }
+
+        *+html .clearfix {
+            min-height: 1%
+        }
+
+        .fl {
+            float: left;
+        }
+
+        .fr {
+            float: right;
+        }
+
+        .catbox {
+            margin: 100px auto;
+        }
+
+        .catbox table {
+            text-align: center;
+            width: 100%;
+        }
+
+        .catbox table th,
+        .catbox table td {
+            border: 1px solid #CADEFF;
+        }
+
+        .catbox table th {
+            background: #e2f2ff;
+            border-top: 3px solid #a7cbff;
+            height: 30px;
+        }
+
+        .catbox table td {
+            padding: 10px;
+            color: #444;
+        }
+
+        .catbox table tbody tr:hover {
+            background: RGB(238, 246, 255);
+        }
+
+        .checkbox {
+            width: 60px;
+        }
+
+        .check-all {
+            vertical-align: middle;
+        }
+
+        .goods {
+            width: 300px;
+        }
+
+        .goods span {
+            width: 180px;
+            margin-top: 20px;
+            text-align: left;
+            float: left;
+        }
+
+        .goods img {
+            width: 100px;
+            height: 80px;
+            margin-right: 10px;
+            float: left;
+        }
+
+        .price {
+            width: 130px;
+        }
+
+        .count {
+            width: 90px;
+        }
+
+        .count .add,
+        .count input,
+        .count .reduce {
+            float: left;
+            margin-right: -1px;
+            position: relative;
+            z-index: 0;
+        }
+
+        .count .add,
+        .count .reduce {
+            height: 23px;
+            width: 17px;
+            border: 1px solid #e5e5e5;
+            background: #f0f0f0;
+            text-align: center;
+            line-height: 23px;
+            color: #444;
+        }
+
+        .count .add:hover,
+        .count .reduce:hover {
+            color: #f50;
+            z-index: 3;
+            border-color: #f60;
+            cursor: pointer;
+        }
+
+        .count input {
+            width: 50px;
+            height: 15px;
+            line-height: 15px;
+            border: 1px solid #aaa;
+            color: #343434;
+            text-align: center;
+            padding: 4px 0;
+            background-color: #fff;
+            z-index: 2;
+        }
+
+        .subtotal {
+            width: 150px;
+            color: red;
+            font-weight: bold;
+        }
+
+        .operation span:hover,
+        a:hover {
+            cursor: pointer;
+            color: red;
+            text-decoration: underline;
+        }
+
+        .foot {
+            margin-top: 0px;
+            color: #666;
+            height: 48px;
+            border: 1px solid #c8c8c8;
+            border-top: 0;
+            background-color: #eaeaea;
+            background-image: linear-gradient(RGB(241, 241, 241), RGB(226, 226, 226));
+            position: relative;
+            z-index: 8;
+        }
+
+        .foot div,
+        .foot a {
+            line-height: 48px;
+            height: 48px;
+        }
+
+        .foot .select-all {
+            width: 80px;
+            height: 48px;
+            line-height: 48px;
+            color: #666;
+            text-align: center;
+        }
+
+        .foot .delete {
+            padding-left: 10px;
+        }
+
+        .foot .closing {
+            border-left: 1px solid #c8c8c8;
+            width: 103px;
+            text-align: center;
+            color: #666;
+            font-weight: bold;
+            cursor: pointer;
+            background-image: linear-gradient(RGB(241, 241, 241), RGB(226, 226, 226));
+        }
+
+        .foot .closing:hover {
+            background-image: linear-gradient(RGB(226, 226, 226), RGB(241, 241, 241));
+            color: #333;
+        }
+
+        .foot .total {
+            margin: 0 20px;
+            cursor: pointer;
+        }
+
+        .foot #priceTotal,
+        .foot #selectedTotal {
+            color: red;
+            font-family: "Microsoft Yahei";
+            font-weight: bold;
+        }
+
+        .foot .selected {
+            cursor: pointer;
+        }
+
+        .foot .selected .arrow {
+            position: relative;
+            top: -3px;
+            margin-left: 3px;
+        }
+
+        .foot .selected .down {
+            position: relative;
+            top: 3px;
+            display: none;
+        }
+
+        .show .selected .down {
+            display: inline;
+        }
+
+        .show .selected .up {
+            display: none;
+        }
+
+        .foot .selected:hover .arrow {
+            color: red;
+        }
+
+        .foot .selected-view {
+            width: 938px;
+            border: 1px solid #c8c8c8;
+            position: absolute;
+            height: auto;
+            background: #ffffff;
+            z-index: 9;
+            bottom: 48px;
+            left: -1px;
+            display: none;
+        }
+
+        .show .selected-view {
+            display: block;
+        }
+
+        .foot .selected-view div {
+            height: auto;
+        }
+
+        .foot .selected-view .arrow {
+            font-size: 16px;
+            line-height: 100%;
+            color: #c8c8c8;
+            position: absolute;
+            right: 330px;
+            bottom: -9px;
+        }
+
+        .foot .selected-view .arrow span {
+            color: #ffffff;
+            position: absolute;
+            left: 0px;
+            bottom: 1px;
+        }
+
+        #selectedViewList {
+            padding: 10px 20px 10px 20px;
+        }
+
+        #selectedViewList div {
+            display: inline-block;
+            position: relative;
+            width: 100px;
+            height: 80px;
+            border: 1px solid #ccc;
+            margin: 10px;
+        }
+
+        #selectedViewList div img {
+            width: 100px;
+            height: 80px;
+            margin-right: 10px;
+            float: left;
+        }
+
+        #selectedViewList div span {
+            display: none;
+            color: #ffffff;
+            font-size: 12px;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            width: 60px;
+            height: 18px;
+            line-height: 18px;
+            text-align: center;
+            background: #000;
+            cursor: pointer;
+        }
+
+        #selectedViewList div:hover span {
+            display: block;
+        }
+
+    }
+
+
+}

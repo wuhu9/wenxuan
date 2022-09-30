@@ -249,13 +249,13 @@ nav ul .red {
   height: 100%;
 }
 .banner .img-wrap {
-  width: 1200%;
+  width: 1000%;
   height: 100%;
   position: absolute;
   text-align: center;
 }
 .banner .img-wrap img {
-  width: 8.33333%;
+  width: 10%;
   height: 100%;
   float: left;
 }
@@ -268,6 +268,26 @@ nav ul .red {
   font-family: "Microsoft Yahei";
   background: rgba(255, 253, 252, 0.6);
   top: 0;
+}
+.banner .mainmeum > ul {
+  width: 400px;
+  height: 5px;
+  position: absolute;
+  left: 500px;
+  bottom: 20px;
+}
+.banner .mainmeum > ul .active {
+  background-color: white;
+  opacity: 1;
+}
+.banner .mainmeum > ul > li {
+  float: left;
+  width: 24px;
+  height: 5px;
+  background: #000;
+  opacity: 0.2;
+  border-radius: 3px;
+  margin: 0 4.5px;
 }
 .banner .mainmeum .solid {
   width: 2px;
@@ -348,7 +368,7 @@ nav ul .red {
   width: 140px;
   height: 80px;
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
   color: #333;
   font-size: 24px;
@@ -392,20 +412,23 @@ nav ul .red {
   color: #D52C27;
   font-weight: 600;
 }
-.recommended .moudle-tab .tab-content {
+.recommended .moudle-tab .show {
+  display: block !important;
+}
+.recommended .moudle-tab .content-wrap .tab-content {
   display: none;
 }
-.recommended .moudle-tab .tab-content .keywords {
+.recommended .moudle-tab .content-wrap .tab-content .keywords {
   padding: 20px 0;
   font-size: 13px;
   border-top: 1px solid #e2e2e2;
 }
-.recommended .moudle-tab .tab-content .keywords a:hover {
+.recommended .moudle-tab .content-wrap .tab-content .keywords a:hover {
   color: #D52C27;
   text-decoration: underline;
   cursor: pointer;
 }
-.recommended .moudle-tab .tab-content .keywords a {
+.recommended .moudle-tab .content-wrap .tab-content .keywords a {
   display: inline-block;
   padding: 0 15px;
   height: 14px;
@@ -417,15 +440,15 @@ nav ul .red {
   text-decoration: none;
   color: #666;
 }
-.recommended .moudle-tab .tab-content .tab-imgwrap {
+.recommended .moudle-tab .content-wrap .tab-content .tab-imgwrap {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.recommended .moudle-tab .tab-content .tab-imgwrap .tab-img:hover {
+.recommended .moudle-tab .content-wrap .tab-content .tab-imgwrap .tab-img:hover {
   border: 1px solid red;
 }
-.recommended .moudle-tab .tab-content .tab-imgwrap .tab-img {
+.recommended .moudle-tab .content-wrap .tab-content .tab-imgwrap .tab-img {
   width: 230px;
   box-sizing: border-box;
   background: #fff;
@@ -437,16 +460,16 @@ nav ul .red {
   flex-direction: column;
   margin-bottom: 10px;
 }
-.recommended .moudle-tab .tab-content .tab-imgwrap .tab-img img {
+.recommended .moudle-tab .content-wrap .tab-content .tab-imgwrap .tab-img img {
   width: 146px;
   height: 146px;
 }
-.recommended .moudle-tab .tab-content .tab-imgwrap .tab-img a {
+.recommended .moudle-tab .content-wrap .tab-content .tab-imgwrap .tab-img a {
   text-decoration: none;
   color: #666;
   text-align: center;
 }
-.recommended .moudle-tab .tab-content .tab-imgwrap .tab-img .author {
+.recommended .moudle-tab .content-wrap .tab-content .tab-imgwrap .tab-img .author {
   margin-bottom: 26px;
   height: 16px;
   line-height: 16px;
@@ -455,19 +478,16 @@ nav ul .red {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.recommended .moudle-tab .tab-content .tab-imgwrap .tab-img .price .price-n {
+.recommended .moudle-tab .content-wrap .tab-content .tab-imgwrap .tab-img .price .price-n {
   font-size: 14px;
   font-weight: 700;
   color: #E4393C;
 }
-.recommended .moudle-tab .tab-content .tab-imgwrap .tab-img .price .price-o {
+.recommended .moudle-tab .content-wrap .tab-content .tab-imgwrap .tab-img .price .price-o {
   float: right;
   font-size: 12px;
   color: #888;
   text-decoration: line-through;
-}
-.recommended .moudle-tab > .show {
-  display: block;
 }
 
 .hotbook .bt-row {

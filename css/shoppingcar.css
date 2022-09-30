@@ -1,3 +1,677 @@
-
+@charset "UTF-8";
+.layout {
+  margin: 0 auto;
+  width: 1016px;
+  text-align: left;
+  font-size: 1em;
+  position: relative;
+  font-size: 12px;
+}
+.layout .atf-head {
+  position: fixed;
+  top: 0;
+  width: 990px;
+  z-index: 100;
+  margin: 0 auto;
+  background: #fff;
+}
+.layout .atf-head .thead {
+  height: 36px;
+  border-bottom: 1px solid #ddd;
+  clear: both;
+  background: #f3f3f3;
+}
+.layout .atf-head .thead .product {
+  width: 435px;
+}
+.layout .atf-head .thead .price {
+  width: 105px;
+}
+.layout .atf-head .thead .credits {
+  width: 95px;
+}
+.layout .atf-head .thead .privilege {
+  width: 120px;
+}
+.layout .atf-head .thead .quantity {
+  width: 100px;
+}
+.layout .atf-head .thead .operation {
+  width: 100px;
+}
+.layout .atf-head .thead .product,
+.layout .atf-head .thead .price,
+.layout .atf-head .thead .credits,
+.layout .atf-head .thead .privilege,
+.layout .atf-head .thead .quantity,
+.layout .atf-head .thead .operation {
+  height: 36px;
+  float: left;
+  line-height: 36px;
+  text-align: center;
+  color: #666;
+}
+.layout .header {
+  height: 100px;
+}
+.layout .header h1 {
+  position: relative;
+  top: 40px;
+}
+.layout .header p {
+  float: right;
+  width: 80px;
+  color: #7e7e7e;
+  font-size: 18px;
+  line-height: 46px;
+  font-weight: normal;
+  text-align: right;
+  cursor: pointer;
+}
+.layout .content {
+  padding: 10px 0;
+}
+.layout .content .empty {
+  background: #f9f9f9 url(https://static.winxuancdn.com/css/v1/images/emptycart.jpg) 250px 50px no-repeat;
+  border: 1px solid #d9d9d9;
+  border-radius: 5px;
+  padding: 90px 90px 90px 390px;
+  margin: 30px 0;
+}
+.layout .content .empty p {
+  font-size: 1.2em;
+}
+.layout .content .empty .red {
+  color: #e22;
+}
+.layout .content .empty .follow {
+  font-size: 1.3em;
+  display: inline-block;
+}
+.layout .content .empty .follow a {
+  text-decoration: none;
+  color: #06c;
+  outline: none;
+}
+.layout .content .table-list {
+  border: 1px solid #ddd;
+  background: #fffefd;
+  margin-bottom: 20px;
+}
+.layout .content .table-list .thead {
+  height: 36px;
+  border-bottom: 1px solid #ddd;
+  clear: both;
+  background: #f3f3f3;
+}
+.layout .content .table-list .thead .product,
+.layout .content .table-list .thead .price,
+.layout .content .table-list .thead .credits,
+.layout .content .table-list .thead .privilege,
+.layout .content .table-list .thead .quantity,
+.layout .content .table-list .thead .operation {
+  height: 36px;
+  float: left;
+  line-height: 36px;
+  text-align: center;
+  color: #666;
+  border-right: 1px solid #fff;
+}
+.layout .content .table-list .thead .product {
+  width: 435px;
+}
+.layout .content .table-list .thead .price {
+  width: 105px;
+}
+.layout .content .table-list .thead .credits {
+  width: 95px;
+}
+.layout .content .table-list .thead .privilege {
+  width: 120px;
+}
+.layout .content .table-list .thead .quantity {
+  width: 100px;
+}
+.layout .content .table-list .thead .operation {
+  width: 100px;
+}
+.layout .content .table-list .group {
+  color: #666;
+  border-bottom: 1px dashed #ddd;
+  background: #f9f9f9;
+  position: relative;
+}
+.layout .content .table-list .group .group-check {
+  position: absolute;
+  left: 12px;
+  top: 9px;
+}
+.layout .content .table-list .group .shop {
+  color: #666;
+  border-bottom: 1px dashed #ddd;
+  background: #f9f9f9;
+  position: relative;
+  height: 30px;
+  clear: both;
+  line-height: 30px;
+  padding: 0 0 0 40px;
+}
+.layout .content .table-list .group .prom-group .trow {
+  height: 65px;
+  border-bottom: 1px solid #ddd;
+  clear: both;
+  line-height: 65px;
+  position: relative;
+}
+.layout .content .table-list .group .prom-group .trow div {
+  height: 65px;
+  float: left;
+  text-align: center;
+  color: #333;
+}
+.layout .content .table-list .group .prom-group .trow .checkbox {
+  width: 35px;
+}
+.layout .content .table-list .group .prom-group .trow .checkbox input {
+  position: absolute;
+  top: 23px;
+  left: 20px;
+}
+.layout .content .table-list .group .prom-group .trow .product {
+  display: flex;
+  width: 400px;
+  line-height: 20px;
+}
+.layout .content .table-list .group .prom-group .trow .product img {
+  height: 55px;
+  width: 55px;
+  float: left;
+  margin: 5px;
+  border: 0;
+  vertical-align: top;
+  overflow: hidden;
+}
+.layout .content .table-list .group .prom-group .trow .product a:first-child {
+  width: 65px;
+  flex-shrink: 0;
+  padding: 0;
+}
+.layout .content .table-list .group .prom-group .trow .product a:nth-child(2) {
+  flex: 1;
+  text-align: left;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-clamp: 2;
+  height: 40px;
+}
+.layout .content .table-list .group .prom-group .trow .product a {
+  text-decoration: none;
+  color: #06c;
+  outline: none;
+}
+.layout .content .table-list .group .prom-group .trow .price {
+  width: 105px;
+}
+.layout .content .table-list .group .prom-group .trow .credits {
+  width: 95px;
+}
+.layout .content .table-list .group .prom-group .trow .privilege {
+  width: 120px;
+}
+.layout .content .table-list .group .prom-group .trow .quantity {
+  width: 100px;
+  position: relative;
+  line-height: 65px;
+}
+.layout .content .table-list .group .prom-group .trow .quantity .increase {
+  background: url(https://static.winxuancdn.com/css/v1/images/icons.png) no-repeat -23px 0;
+  top: 24px;
+  left: 86px;
+}
+.layout .content .table-list .group .prom-group .trow .quantity input {
+  width: 40px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  height: 20px;
+  top: 20px;
+  left: 40px;
+  overflow: visible;
+  position: absolute;
+}
+.layout .content .table-list .group .prom-group .trow .quantity a {
+  display: block;
+  width: 18px;
+  height: 13px;
+  text-indent: -9999px;
+  overflow: hidden;
+  position: absolute;
+  line-height: normal;
+}
+.layout .content .table-list .group .prom-group .trow .quantity .reduce {
+  background: url(https://static.winxuancdn.com/css/v1/images/icons.png) no-repeat 0 0;
+  top: 24px;
+  left: 18px;
+  position: absolute;
+  line-height: normal;
+}
+.layout .content .table-list .group .prom-group .trow .operation {
+  width: 100px;
+}
+.layout .content .table-list .tfoot {
+  background: #f3f3f3;
+}
+.layout .content .table-list .tfoot .summary {
+  height: 50px;
+  background: #fff;
+  position: relative;
+}
+.layout .content .table-list .tfoot .summary ul {
+  clear: both;
+  padding: 10px 20px;
+}
+.layout .content .table-list .tfoot .summary ul li {
+  float: left;
+  line-height: 24px;
+  margin: 0 10px 0 0;
+  padding: 0 8px 0 20px;
+}
+.layout .content .table-list .tfoot .summary ul li a {
+  background: #fff;
+  display: block;
+  text-decoration: none;
+  color: #06c;
+  outline: none;
+}
+.layout .content .table-list .tfoot .summary ul .favorite {
+  background: url(https://static.winxuancdn.com/css/v1/images/icons.png) no-repeat -44px 4px;
+}
+.layout .content .table-list .tfoot .summary ul .delete {
+  background: url(https://static.winxuancdn.com/css/v1/images/icons.png) no-repeat -63px 4px;
+}
+.layout .content .table-list .tfoot .summary .brief {
+  width: 360px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.layout .content .table-list .tfoot .summary .brief p {
+  width: 145px;
+  text-align: right;
+  float: left;
+}
+.layout .content .table-list .tfoot .summary .brief span {
+  width: 100px;
+  text-align: right;
+  float: left;
+}
+.layout .content .table-list .tfoot .summary .brief label {
+  float: left;
+  width: 100px;
+  text-indent: 10px;
+}
+.layout .content .table-list .tfoot .summary .brief div {
+  height: 25px;
+  line-height: 25px;
+  clear: both;
+}
+.layout .content .table-list .tfoot .summary .save label {
+  width: 200px;
+  text-indent: 110px;
+}
+.layout .content .table-list .tfoot .count {
+  height: 40px;
+  position: relative;
+  clear: both;
+}
+.layout .content .table-list .tfoot .count .balance {
+  width: 450px;
+  position: absolute;
+  right: 0;
+  top: 5px;
+  height: 30px;
+  line-height: 30px;
+}
+.layout .content .table-list .tfoot .count .balance .price {
+  width: 165px;
+  right: 16px;
+  top: 0;
+  text-align: right;
+  color: #e22;
+  font-weight: bolder;
+  font-size: 1.5em;
+  position: absolute;
+}
+.layout .content .table-list .tfoot .count .balance label {
+  width: 110px;
+  right: 220px;
+  font-weight: bolder;
+}
+.layout .button-wrap {
+  height: 80px;
+  clear: both;
+}
+.layout .button-wrap .continue {
+  float: left;
+  width: 142px;
+  height: 45px;
+  background-color: #f2f2f2;
+  border: none;
+  color: #333;
+  position: relative;
+  display: block;
+  zoom: 1;
+  outline: none;
+}
+.layout .button-wrap .continue b {
+  width: 142px;
+  height: 45px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  background-image: url(https://static.winxuancdn.com/css/v1/images/balance-button.jpg);
+  cursor: pointer;
+  background-position: 0 -4px;
+}
+.layout .button-wrap .balance {
+  width: 208px;
+  height: 45px;
+  float: right;
+  background-color: #f2f2f2;
+  border: none;
+  color: #333;
+  position: relative;
+  display: block;
+  padding: 0;
+  margin: 0;
+  zoom: 1;
+  outline: none;
+}
+.layout .button-wrap .balance b {
+  width: 208px;
+  height: 45px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  background-image: url(https://static.winxuancdn.com/css/v1/images/balance-button.jpg);
+  cursor: pointer;
+  background-position: -142px -4px;
+}
+.layout .content {
+  padding: 10px 0;
+}
+.layout .content table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 0;
+}
+.layout .content body {
+  color: #666;
+  font: 12px/180% Arial, Helvetica, sans-serif, "新宋体";
+}
+.layout .content clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.layout .content .clearfix {
+  display: inline-table;
+}
+.layout .content * html .clearfix {
+  height: 1%;
+}
+.layout .content .clearfix {
+  display: block;
+}
+.layout .content * + html .clearfix {
+  min-height: 1%;
+}
+.layout .content .fl {
+  float: left;
+}
+.layout .content .fr {
+  float: right;
+}
+.layout .content .catbox {
+  margin: 100px auto;
+}
+.layout .content .catbox table {
+  text-align: center;
+  width: 100%;
+}
+.layout .content .catbox table th,
+.layout .content .catbox table td {
+  border: 1px solid #CADEFF;
+}
+.layout .content .catbox table th {
+  background: #e2f2ff;
+  border-top: 3px solid #a7cbff;
+  height: 30px;
+}
+.layout .content .catbox table td {
+  padding: 10px;
+  color: #444;
+}
+.layout .content .catbox table tbody tr:hover {
+  background: RGB(238, 246, 255);
+}
+.layout .content .checkbox {
+  width: 60px;
+}
+.layout .content .check-all {
+  vertical-align: middle;
+}
+.layout .content .goods {
+  width: 300px;
+}
+.layout .content .goods span {
+  width: 180px;
+  margin-top: 20px;
+  text-align: left;
+  float: left;
+}
+.layout .content .goods img {
+  width: 100px;
+  height: 80px;
+  margin-right: 10px;
+  float: left;
+}
+.layout .content .price {
+  width: 130px;
+}
+.layout .content .count {
+  width: 90px;
+}
+.layout .content .count .add,
+.layout .content .count input,
+.layout .content .count .reduce {
+  float: left;
+  margin-right: -1px;
+  position: relative;
+  z-index: 0;
+}
+.layout .content .count .add,
+.layout .content .count .reduce {
+  height: 23px;
+  width: 17px;
+  border: 1px solid #e5e5e5;
+  background: #f0f0f0;
+  text-align: center;
+  line-height: 23px;
+  color: #444;
+}
+.layout .content .count .add:hover,
+.layout .content .count .reduce:hover {
+  color: #f50;
+  z-index: 3;
+  border-color: #f60;
+  cursor: pointer;
+}
+.layout .content .count input {
+  width: 50px;
+  height: 15px;
+  line-height: 15px;
+  border: 1px solid #aaa;
+  color: #343434;
+  text-align: center;
+  padding: 4px 0;
+  background-color: #fff;
+  z-index: 2;
+}
+.layout .content .subtotal {
+  width: 150px;
+  color: red;
+  font-weight: bold;
+}
+.layout .content .operation span:hover,
+.layout .content a:hover {
+  cursor: pointer;
+  color: red;
+  text-decoration: underline;
+}
+.layout .content .foot {
+  margin-top: 0px;
+  color: #666;
+  height: 48px;
+  border: 1px solid #c8c8c8;
+  border-top: 0;
+  background-color: #eaeaea;
+  background-image: linear-gradient(RGB(241, 241, 241), RGB(226, 226, 226));
+  position: relative;
+  z-index: 8;
+}
+.layout .content .foot div,
+.layout .content .foot a {
+  line-height: 48px;
+  height: 48px;
+}
+.layout .content .foot .select-all {
+  width: 80px;
+  height: 48px;
+  line-height: 48px;
+  color: #666;
+  text-align: center;
+}
+.layout .content .foot .delete {
+  padding-left: 10px;
+}
+.layout .content .foot .closing {
+  border-left: 1px solid #c8c8c8;
+  width: 103px;
+  text-align: center;
+  color: #666;
+  font-weight: bold;
+  cursor: pointer;
+  background-image: linear-gradient(RGB(241, 241, 241), RGB(226, 226, 226));
+}
+.layout .content .foot .closing:hover {
+  background-image: linear-gradient(RGB(226, 226, 226), RGB(241, 241, 241));
+  color: #333;
+}
+.layout .content .foot .total {
+  margin: 0 20px;
+  cursor: pointer;
+}
+.layout .content .foot #priceTotal,
+.layout .content .foot #selectedTotal {
+  color: red;
+  font-family: "Microsoft Yahei";
+  font-weight: bold;
+}
+.layout .content .foot .selected {
+  cursor: pointer;
+}
+.layout .content .foot .selected .arrow {
+  position: relative;
+  top: -3px;
+  margin-left: 3px;
+}
+.layout .content .foot .selected .down {
+  position: relative;
+  top: 3px;
+  display: none;
+}
+.layout .content .show .selected .down {
+  display: inline;
+}
+.layout .content .show .selected .up {
+  display: none;
+}
+.layout .content .foot .selected:hover .arrow {
+  color: red;
+}
+.layout .content .foot .selected-view {
+  width: 938px;
+  border: 1px solid #c8c8c8;
+  position: absolute;
+  height: auto;
+  background: #ffffff;
+  z-index: 9;
+  bottom: 48px;
+  left: -1px;
+  display: none;
+}
+.layout .content .show .selected-view {
+  display: block;
+}
+.layout .content .foot .selected-view div {
+  height: auto;
+}
+.layout .content .foot .selected-view .arrow {
+  font-size: 16px;
+  line-height: 100%;
+  color: #c8c8c8;
+  position: absolute;
+  right: 330px;
+  bottom: -9px;
+}
+.layout .content .foot .selected-view .arrow span {
+  color: #ffffff;
+  position: absolute;
+  left: 0px;
+  bottom: 1px;
+}
+.layout .content #selectedViewList {
+  padding: 10px 20px 10px 20px;
+}
+.layout .content #selectedViewList div {
+  display: inline-block;
+  position: relative;
+  width: 100px;
+  height: 80px;
+  border: 1px solid #ccc;
+  margin: 10px;
+}
+.layout .content #selectedViewList div img {
+  width: 100px;
+  height: 80px;
+  margin-right: 10px;
+  float: left;
+}
+.layout .content #selectedViewList div span {
+  display: none;
+  color: #ffffff;
+  font-size: 12px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 60px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  background: #000;
+  cursor: pointer;
+}
+.layout .content #selectedViewList div:hover span {
+  display: block;
+}
 
 /*# sourceMappingURL=shoppingcar.css.map */
